@@ -42,7 +42,7 @@ parserApp.controller('ParserCtrl', function ParserCtrl($scope, $http) {
     //$scope.getUsers();
   };*/
   $scope.getInventory = function(){
-    $http.get('http://parser/parser.php')
+    $http.get('parser.php')
     .then(function(response){
       $scope.userinventory = response.data;
     });
