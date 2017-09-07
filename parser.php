@@ -14,9 +14,6 @@ $file = file_get_contents($url, false, $context);
 $res = json_decode($file);
 $res = $res->response;
 
-header('Content-type: text/html; charset=utf8');
-
-
 //	Готовим массив с данными для отображения, на основании ответа от сервера
 
 $data = [];
@@ -38,5 +35,6 @@ for($i=0; $i<count($res); $i++) {
 	}
 
 }
+header('Content-type: application/json; charset=utf8');
 echo json_encode($data);
 

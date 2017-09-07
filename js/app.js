@@ -1,4 +1,3 @@
-
 var parserApp = angular.module('parserApp', []);
 
 parserApp.controller('ParserCtrl', function ParserCtrl($scope, $http) {
