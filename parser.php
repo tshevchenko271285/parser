@@ -27,7 +27,7 @@ for($i=0; $i<count($res); $i++) {
 		$data[$res[$i]->d]['cnt']++;
 		continue;
 	}
-
+	//Сохраняем необходимые данные
 	$data[$i]['name'] = trim(strip_tags($res[$i]->d));
 	$data[$i]['cena'] = (float) trim(strip_tags($res[$i]->v));
 	$data[$i]['cnt'] = 1;
@@ -37,9 +37,6 @@ for($i=0; $i<count($res); $i++) {
 		$data[$i]['name'] = "Нет имени. Оружие типа: ".$res[$i]->t;
 	}
 
-}	
-//header('Content-Type: application/json');
-//echo print_r($data);
-$response = json_encode($data);
-echo $response;
+}
+echo json_encode($data);
 
